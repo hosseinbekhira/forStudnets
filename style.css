@@ -3,9 +3,10 @@
   margin: 0px;
   padding: 0px;
 }
+
 :root {
   --p--color: #333333;
-  --s--color: #ffd93d;
+  --s--color: #002eac;
   --th--color: #cccccc;
   --white--color: #ffffff;
 }
@@ -37,71 +38,89 @@ a {
 
 /* Start Header Section */
 .header {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  /* padding-top: 50px; */
+  /* padding-bottom: 50px; */
+  /* background-color: red; */
+  height: 220px;
+  box-shadow: 0px 5px 10px 2px var(--th--color);
 }
 .header .logo {
-  display: inline-block;
+  float: right;
   width: 100px;
   height: 100px;
+  line-height: 290px;
 }
 .header .logo .img {
   width: 100%;
   height: 100%;
 }
 .header .navbar {
-  display: inline-block;
+  float: right;
   margin-right: 200px;
+  margin-top: -24px;
 }
 .header .navbar .list-elements {
-  display: inline-block;
+  float: right;
   border: 1px solid var(--th--color);
   border-radius: 35px;
+  height: 64px;
 }
 .header .navbar .list-elements .element {
   float: right;
-  margin-left: 40px;
-  padding: 10px 30px 10px 10px;
+  padding-top: 5px;
+  line-height: 48px;
+  margin-left: 7px;
+  margin-right: 40px;
 }
 .header .navbar .list-elements .element a {
   font-size: 1.1rem;
   color: var(--p--color);
   transition: color 0.2s ease;
 }
-.header .navbar .list-elements .search-cont {
-  border: 2px solid var(--s--color);
-  border-radius: 50%;
-  padding: 3px 12px;
-  padding-top: 5px;
-  margin-left: 5px;
-  cursor: pointer;
-  transition: all 0.4s ease;
-}
-.header .navbar .list-elements .search-cont:hover {
-  background-color: var(--s--color);
-}
 .header .navbar .list-elements .element .my-icon {
+  display: block;
   font-size: 1.5rem;
+  border: 1px solid var(--s--color);
+  border-radius: 50%;
   color: var(--s--color);
   transition: all 0.4s ease;
+  line-height: 50px;
+  padding-left: 16px;
+  padding-right: 12px;
   cursor: pointer;
-  line-height: calc(1.5rem + 16px);
 }
 .header .navbar .list-elements .element .my-icon:hover {
   color: var(--white--color);
+  background-color: var(--s--color);
 }
 .header .navbar .list-elements .element a:hover {
   color: var(--s--color);
 }
 
 .header .navbar .btn-donation {
-  display: inline-block;
+  float: left;
+  margin-right: 20px;
 }
 .header .navbar .btn-donation a {
+  display: block;
+  color: var(--p--color);
+  border: 1px solid var(--th--color);
+  height: 64px;
+  line-height: 64px;
+  font-size: 1.1rem;
+  padding: 0px 50px;
+  border-radius: 35px;
+  transition: all 0.4s ease;
 }
-.header .navbar .btn-donation a span {
+.header .navbar .btn-donation a:hover {
+  border-color: var(--s--color);
+  color: var(--s--color);
 }
+
 .header .navbar .btn-donation a i {
+  color: var(--s--color);
+  font-size: 1.3rem;
+  padding-left: 10px;
 }
 
 /* End Header Section */
