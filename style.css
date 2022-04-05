@@ -25,11 +25,17 @@ a {
   text-decoration: none;
 }
 .container {
-  width: 1200px;
+  width: 1250px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
+}
+.float-right {
+  float: right;
+}
+.float-left {
+  float: left;
 }
 .clear {
   clear: both;
@@ -55,12 +61,10 @@ a {
   height: 100%;
 }
 .header .navbar {
-  float: right;
   margin-right: 200px;
   margin-top: -24px;
 }
 .header .navbar .list-elements {
-  float: right;
   border: 1px solid var(--th--color);
   border-radius: 35px;
   height: 64px;
@@ -98,7 +102,6 @@ a {
 }
 
 .header .navbar .btn-donation {
-  float: left;
   margin-right: 20px;
 }
 .header .navbar .btn-donation a {
@@ -124,3 +127,54 @@ a {
 }
 
 /* End Header Section */
+
+/* Start Main */
+.main-section {
+}
+
+/* Start First Section  */
+.main-section .first-section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.main-section .first-section .cont-section {
+  position: relative;
+}
+.main-section .first-section .cont-section .first-title {
+  font-size: 1.3rem;
+  color: var(--p--color);
+}
+.main-section .first-section .cont-section .line {
+  position: absolute;
+  top: 14px;
+  right: 192px;
+  background-color: var(--white--color);
+  border: 5px solid var(--s--color);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.main-section .first-section .cont-section .line::before {
+  content: "";
+  position: absolute;
+  top: -89px;
+  left: 4px;
+  background-color: var(--th--color);
+  width: 2px;
+  height: 190px;
+  z-index: -1;
+}
+.main-section .first-section .cont-section .intro-p {
+  margin-right: 100px;
+  font-size: 18px;
+  margin-top: 7px;
+  color: var(--p--color);
+}
+/* End First Section  */
+
+/* Start Second Section  */
+.main-section .second-section {
+}
+/* End Second Section  */
+
+/* End Main */
