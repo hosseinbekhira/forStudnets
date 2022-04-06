@@ -48,6 +48,47 @@ a {
   font-size: 1.3rem;
   color: var(--p--color);
 }
+
+/* Start Line Style  */
+
+.line {
+  position: absolute;
+  right: 226px;
+  background-color: var(--white--color);
+  border: 5px solid var(--s--color);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.line::before {
+  content: "";
+  position: absolute;
+  top: -89px;
+  left: 4px;
+  background-color: var(--th--color);
+  width: 2px;
+  z-index: -1;
+}
+.p1 {
+  top: 14px;
+}
+.p1::before {
+  height: 190px;
+}
+.p2 {
+  top: 12px;
+}
+.p2::before {
+  height: 1400px;
+}
+.p3 {
+  top: 12px;
+}
+.p3::before {
+  height: 700px;
+}
+/* End Line Style  */
+
 /* End Global Settings */
 
 /* Start Header Section */
@@ -88,6 +129,9 @@ a {
   font-size: 1.1rem;
   color: var(--p--color);
   transition: color 0.2s ease;
+}
+.header .navbar .list-elements .element a.active {
+  color: var(--s--color);
 }
 .header .navbar .list-elements .element .my-icon {
   display: block;
@@ -145,38 +189,9 @@ a {
   padding-top: 70px;
   padding-bottom: 70px;
 }
-.line {
-  position: absolute;
-  right: 192px;
-  background-color: var(--white--color);
-  border: 5px solid var(--s--color);
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-}
-.line::before {
-  content: "";
-  position: absolute;
-  top: -89px;
-  left: 4px;
-  background-color: var(--th--color);
-  width: 2px;
-  z-index: -1;
-}
-.p1 {
-  top: 14px;
-}
-.p1::before {
-  height: 190px;
-}
-.p2 {
-  top: 12px;
-}
-.p2::before {
-  height: 1400px;
-}
 .main-section .first-section .intro-p {
   margin-right: 100px;
+  padding-right: 20px;
   font-size: 18px;
   margin-top: 7px;
   color: var(--p--color);
@@ -185,6 +200,7 @@ a {
 
 /* Start Second Section  */
 .main-section .second-section {
+  padding-bottom: 30px;
 }
 .main-section .second-section .title-section {
   width: 20%;
@@ -219,17 +235,115 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0);
   background-color: var(--s--color);
   color: var(--white--color);
+  border: 2px solid transparent;
   padding: 10px;
   width: 50%;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 30px;
   font-weight: 600;
-  transition: all 0.6s ease;
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+}
+.main-section .second-section .books-container .cont-book .book:hover .details {
+  transform: scale(0.7) translate(-69%, -74%) rotate(10deg);
+  opacity: 1;
+}
+.main-section .second-section .books-container .cont-book .book .details:hover {
+  color: var(--s--color);
+  background-color: var(--white--color);
+  border-color: var(--s--color);
 }
 
 /* End Second Section  */
+
+.main-section .third-section {
+}
+.main-section .third-section .title-third-section {
+  width: 20%;
+}
+.main-section .third-section .container-donate {
+  width: 80%;
+  padding-right: 30px;
+}
+.main-section .third-section .container-donate .h3 {
+  font-size: 1.4rem;
+  color: var(--s--color);
+  margin-bottom: 20px;
+}
+.main-section .third-section .container-donate .description {
+  font-size: 1.2rem;
+  color: var(--p--color);
+  text-align: justify;
+}
+.main-section .third-section .container-donate .cont-btn-img {
+}
+.main-section .third-section .container-donate .cont-btn-img .cont-btn-donate,
+.main-section .third-section .container-donate .cont-btn-img .img-donate {
+  width: 50%;
+}
+.main-section
+  .third-section
+  .container-donate
+  .cont-btn-img
+  .cont-btn-donate
+  .btn-donate {
+  border: none;
+  background-color: transparent;
+  display: block;
+  width: 220px;
+  margin: 100px auto;
+}
+.main-section
+  .third-section
+  .container-donate
+  .cont-btn-img
+  .cont-btn-donate
+  .btn-donate
+  a {
+  display: block;
+  font-family: "Cairo", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--s--color);
+  border: 1px solid var(--s--color);
+  border-radius: 30px;
+  text-align: center;
+  padding: 10px 0px;
+  transition: all 0.3s ease;
+}
+.main-section
+  .third-section
+  .container-donate
+  .cont-btn-img
+  .cont-btn-donate
+  .btn-donate
+  a:hover {
+  color: var(--white--color);
+  background-color: var(--s--color);
+}
+.main-section .third-section .container-donate .cont-btn-img .img-donate {
+  overflow: hidden;
+}
+
+.main-section .third-section .container-donate .cont-btn-img .img-donate .img {
+  position: relative;
+  top: -60px;
+  left: 0px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+.main-section
+  .third-section
+  .container-donate
+  .cont-btn-img
+  .img-donate:hover
+  .img {
+  transform: translateY(-40px) scale(1.2) rotate(4deg);
+}
 
 /* End Main */
